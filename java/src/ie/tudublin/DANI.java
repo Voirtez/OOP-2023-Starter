@@ -26,11 +26,9 @@ public class DANI extends PApplet
 		{
 			String line = "";
 
-			// pick a random word from the arraylist
 			String randWord = word.get((int)random(word.size())).getWord();
 			line += randWord + " ";
 
-			// look at the word and check if it has any follows
 			if(findWords(randWord).getFollows().size() > 0)
 			{
 				// if it has follow, pick a random one and add it to the string
