@@ -110,7 +110,7 @@ public class DANI extends PApplet
 							{
 								if(f.getWord().equals(words[i + 1]))
 								{
-									f.setCount(f.getCount() + 1); // increment the count
+									f.setCount(f.getCount() + 1);
 								}
 							}
 						}
@@ -156,7 +156,6 @@ public class DANI extends PApplet
 		textSize(20);
         textAlign(CENTER, CENTER);
 
-		// display the newSonnet
 		if(newSonnet != null)
 		{
 			for(int i = 0; i < newSonnet.length; i++)
