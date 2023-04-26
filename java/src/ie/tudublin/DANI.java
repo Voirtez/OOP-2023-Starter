@@ -39,7 +39,7 @@ public class DANI extends PApplet
 				newSonnet[i] = line;
 				continue;
 			}
-			
+
 			newSonnet[i] = line;
 
 		}
@@ -84,35 +84,28 @@ public class DANI extends PApplet
 			words[i] = words[i].toLowerCase();
 		}
 		
-		
 
-		// add words to the word arraylist if they are not already in it and add the follow
-		
 		for(int i = 0; i < words.length - 1; i++)
 		{
-			// if the word is not in the arraylist
 			if(findWords(words[i]) == null)
 			{
-				Word w = new Word(words[i], new ArrayList<Follow>()); // create a new word
+				Word w = new Word(words[i], new ArrayList<Follow>());
 
-				w.getFollows().add(new Follow(words[i + 1], 1)); // add the follow to the word
-				word.add(w); // add the word to the arraylist
+				w.getFollows().add(new Follow(words[i + 1], 1));
+				word.add(w);
 			}
 			else
 			{
 				for(Word w: word)
 				{
-					// if the word is in the arraylist
 					if(w.getWord().equals(words[i]))
 					{
-						// if the follow is not in the arraylist
 						if(!w.findFollow(words[i + 1]))
 						{
-							w.getFollows().add(new Follow(words[i + 1], 1)); // add the follow to the word
+							w.getFollows().add(new Follow(words[i + 1], 1));
 						}
 						else
 						{
-							// if the follow is in the arraylist
 							for(Follow f: w.getFollows())
 							{
 								if(f.getWord().equals(words[i + 1]))
