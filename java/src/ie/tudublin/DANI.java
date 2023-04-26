@@ -21,12 +21,6 @@ public class DANI extends PApplet
     public String[] writeSonnet()
     {
 		String[] newSonnet = new String[14];
-		
-		// pick a random word from the arraylist
-		// look at the word and check if it has any follows
-		// if it has follow, pick a random one and add it to the string
-		// if the string is 8 words long or if the word has no follows, move to the next line
-		// do this for 14 lines
 
 		for(int i = 0; i < newSonnet.length; i++)
 		{
