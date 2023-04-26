@@ -31,18 +31,15 @@ public class DANI extends PApplet
 
 			if(findWords(randWord).getFollows().size() > 0)
 			{
-				// if it has follow, pick a random one and add it to the string
 				String randFollow = findWords(randWord).getFollows().get((int)random(findWords(randWord).getFollows().size())).getWord();
 				line += randFollow + " ";
 			}
 			else
 			{
-				// if the string is 8 words long or if the word has no follows, move to the next line
 				newSonnet[i] = line;
 				continue;
 			}
-
-			// do this for 14 lines
+			
 			newSonnet[i] = line;
 
 		}
